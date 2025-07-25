@@ -1,0 +1,12 @@
+<suite name="MakeMyTrip Automation Suite">
+
+
+	<listeners>
+		<listener class-name="utilities.ExtentReportManager"/>
+	</listeners>
+  <test name="Travel Tests">
+    <classes>
+      <class name="tests.CabBookingTest"/>
+    </classes>
+  </test>
+</suite>

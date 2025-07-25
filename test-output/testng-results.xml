@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-07-25T09:28:14 IST" name="MakeMyTrip Automation Suite" finished-at="2025-07-25T09:28:45 IST" duration-ms="31531">
+    <groups>
+    </groups>
+    <test started-at="2025-07-25T09:28:14 IST" name="Travel Tests" finished-at="2025-07-25T09:28:45 IST" duration-ms="31531">
+      <class name="tests.CabBookingTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.CabBookingTest@9d5509a]" started-at="2025-07-25T09:28:14 IST" name="setup" finished-at="2025-07-25T09:28:22 IST" duration-ms="7891" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testCabFare()[pri:1, instance:tests.CabBookingTest@9d5509a]" started-at="2025-07-25T09:28:22 IST" name="testCabFare" finished-at="2025-07-25T09:28:37 IST" duration-ms="15153" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCabFare -->
+        <test-method signature="testInvalidEmailGiftCard()[pri:2, instance:tests.CabBookingTest@9d5509a]" started-at="2025-07-25T09:28:37 IST" name="testInvalidEmailGiftCard" finished-at="2025-07-25T09:28:43 IST" duration-ms="6188" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInvalidEmailGiftCard -->
+        <test-method signature="testHotelAdultCount()[pri:3, instance:tests.CabBookingTest@9d5509a]" started-at="2025-07-25T09:28:44 IST" name="testHotelAdultCount" finished-at="2025-07-25T09:28:45 IST" duration-ms="1698" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testHotelAdultCount -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:tests.CabBookingTest@9d5509a]" started-at="2025-07-25T09:28:45 IST" name="teardown" finished-at="2025-07-25T09:28:45 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- tests.CabBookingTest -->
+    </test> <!-- Travel Tests -->
+  </suite> <!-- MakeMyTrip Automation Suite -->
+</testng-results>
