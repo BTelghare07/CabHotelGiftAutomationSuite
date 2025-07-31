@@ -1,6 +1,50 @@
-2025-07-25 09:01:10 INFO  CabBookingTest:14 - ***** Starting TC001_AccountRegistrationTest  ****
-2025-07-25 09:14:30 INFO  CabBookingTest:14 - ***** Starting TC001_AccountRegistrationTest  ****
-2025-07-25 09:27:11 INFO  CabBookingTest:14 - ***** Starting TC001_AccountRegistrationTest  ****
-2025-07-25 09:28:22 INFO  CabBookingTest:14 - ***** Starting TC001_AccountRegistrationTest  ****
-2025-07-25 09:32:25 WARN  TestNGContentHandler:133 - It is strongly recommended to add "<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >" at the top of the suite file [C:\Users\2413631\eclipse-workspace\CabHotelGiftAutomationSuite\testng.xml] otherwise TestNG may fail or not work as expected.
-2025-07-25 09:32:31 INFO  CabBookingTest:14 - ***** Starting TC001_AccountRegistrationTest  ****
+2025-07-31 10:44:01 WARN  TestNGContentHandler:133 - It is strongly recommended to add "<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.1.dtd" >" at the top of the suite file [C:\Users\2413631\eclipse-workspace\CabHotelGiftAutomationSuite\testng.xml] otherwise TestNG may fail or not work as expected.
+2025-07-31 10:44:01 INFO  Utils:112 - [TestNG] Running:
+  C:\Users\2413631\eclipse-workspace\CabHotelGiftAutomationSuite\testng.xml
+
+2025-07-31 10:44:09 INFO  CabBookingTest:19 - ***** Starting testCabFare *****
+2025-07-31 10:44:20 INFO  CabBookingTest:24 - Cab booking flow executed successfully.
+2025-07-31 10:44:20 INFO  CabBookingTest:33 - ***** Starting testInvalidEmailGiftCard *****
+2025-07-31 10:44:26 INFO  CabBookingTest:54 - Testing email: amritaaexample.com
+2025-07-31 10:44:29 INFO  CabBookingTest:63 - Captured message: Please enter a valid Email id.
+2025-07-31 10:44:29 ERROR CabBookingTest:70 - Invalid email ID detected: amritaaexample.com
+2025-07-31 10:44:29 INFO  CabBookingTest:54 - Testing email: anita.sharmadomain@.com
+2025-07-31 10:44:31 INFO  CabBookingTest:63 - Captured message: Please enter a valid Email id.
+2025-07-31 10:44:31 ERROR CabBookingTest:70 - Invalid email ID detected: anita.sharmadomain@.com
+2025-07-31 10:44:31 INFO  CabBookingTest:54 - Testing email: rahulvsample.@
+2025-07-31 10:44:34 INFO  CabBookingTest:63 - Captured message: Please enter a valid Email id.
+2025-07-31 10:44:34 ERROR CabBookingTest:70 - Invalid email ID detected: rahulvsample.@
+2025-07-31 10:44:34 INFO  CabBookingTest:54 - Testing email: priyadesai@gmail.com
+2025-07-31 10:44:37 INFO  CabBookingTest:63 - Captured message: Valid on
+Flights, Hotels and Holidays Transactions only
+2025-07-31 10:44:37 INFO  CabBookingTest:68 - Valid email ID entered: priyadesai@gmail.com
+2025-07-31 10:44:37 INFO  CabBookingTest:54 - Testing email: nehagmail.com
+2025-07-31 10:44:40 INFO  CabBookingTest:63 - Captured message: Please enter a valid Email id.
+2025-07-31 10:44:40 ERROR CabBookingTest:70 - Invalid email ID detected: nehagmail.com
+2025-07-31 10:44:40 INFO  CabBookingTest:91 - ***** Starting testHotelAdultCount *****
+2025-07-31 10:44:42 INFO  CabBookingTest:102 - Total Number of Adults: 40
+2025-07-31 11:22:53 WARN  TestNGContentHandler:133 - It is strongly recommended to add "<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.1.dtd" >" at the top of the suite file [C:\Users\2413631\eclipse-workspace\CabHotelGiftAutomationSuite\testng.xml] otherwise TestNG may fail or not work as expected.
+2025-07-31 11:22:53 INFO  Utils:112 - [TestNG] Running:
+  C:\Users\2413631\eclipse-workspace\CabHotelGiftAutomationSuite\testng.xml
+
+2025-07-31 11:23:04 INFO  CabBookingTest:19 - ***** Starting testCabFare *****
+2025-07-31 11:23:25 INFO  CabBookingTest:24 - Cab booking flow executed successfully.
+2025-07-31 11:23:25 INFO  CabBookingTest:33 - ***** Starting testInvalidEmailGiftCard *****
+2025-07-31 11:23:33 INFO  CabBookingTest:54 - Testing email: amritaaexample.com
+2025-07-31 11:23:36 INFO  CabBookingTest:63 - Captured message: Please enter a valid Email id.
+2025-07-31 11:23:36 ERROR CabBookingTest:70 - Invalid email ID detected: amritaaexample.com
+2025-07-31 11:23:36 INFO  CabBookingTest:54 - Testing email: anita.sharmadomain@.com
+2025-07-31 11:23:39 INFO  CabBookingTest:63 - Captured message: Please enter a valid Email id.
+2025-07-31 11:23:39 ERROR CabBookingTest:70 - Invalid email ID detected: anita.sharmadomain@.com
+2025-07-31 11:23:39 INFO  CabBookingTest:54 - Testing email: rahulvsample.@
+2025-07-31 11:23:42 INFO  CabBookingTest:63 - Captured message: Please enter a valid Email id.
+2025-07-31 11:23:42 ERROR CabBookingTest:70 - Invalid email ID detected: rahulvsample.@
+2025-07-31 11:23:42 INFO  CabBookingTest:54 - Testing email: priyadesai@gmail.com
+2025-07-31 11:23:44 INFO  CabBookingTest:63 - Captured message: Valid on
+Flights, Hotels and Holidays Transactions only
+2025-07-31 11:23:44 INFO  CabBookingTest:68 - Valid email ID entered: priyadesai@gmail.com
+2025-07-31 11:23:44 INFO  CabBookingTest:54 - Testing email: nehagmail.com
+2025-07-31 11:23:47 INFO  CabBookingTest:63 - Captured message: Please enter a valid Email id.
+2025-07-31 11:23:47 ERROR CabBookingTest:70 - Invalid email ID detected: nehagmail.com
+2025-07-31 11:23:47 INFO  CabBookingTest:91 - ***** Starting testHotelAdultCount *****
+2025-07-31 11:23:49 INFO  CabBookingTest:102 - Total Number of Adults: 40

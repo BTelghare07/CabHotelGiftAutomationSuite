@@ -50,25 +50,34 @@
 	<!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core -->
 	<!-- https://logging.apache.org/log4j/2.x/maven-artifacts.html -->
 	
+	
 	<dependency>
 	    <groupId>org.apache.logging.log4j</groupId>
 	    <artifactId>log4j-core</artifactId>
-	    <version>2.25.1</version>
-	  </dependency>
-
+	    <version>2.20.0</version>
+	</dependency>
 	<!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-api -->
 	<dependency>
 	    <groupId>org.apache.logging.log4j</groupId>
 	    <artifactId>log4j-api</artifactId>
-	    <version>2.25.1</version>
-	 </dependency>
+	    <version>2.20.0</version>
+	</dependency>
+	
+	<dependency>
+	    <groupId>org.seleniumhq.selenium</groupId>
+	    <artifactId>selenium-devtools-v137</artifactId>
+	    <version>4.34.0</version>
+	</dependency>
 
+	
 	<!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-slf4j-impl -->
+	
 	<dependency>
 	    <groupId>org.apache.logging.log4j</groupId>
-	    <artifactId>log4j-slf4j-impl</artifactId>
-	    <version>2.25.1</version>
+	    <artifactId>log4j-slf4j2-impl</artifactId>
+	    <version>2.20.0</version> <!-- or match your Log4j2 version -->
 	</dependency>
+
 
 
 		
@@ -100,6 +109,8 @@
 	    <artifactId>commons-lang3</artifactId>
 	    <version>3.12.0</version>
 	</dependency>
+	
+	
 	
   </dependencies>
 

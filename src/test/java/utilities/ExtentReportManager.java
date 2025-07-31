@@ -4,7 +4,7 @@ import java.awt.Desktop;
 import java.io.File;
 import java.io.IOException;
 //import java.net.URL;
-import java.net.URL;
+//import java.net.URL;
 
 //Extent report 5.x...//version
 
@@ -25,7 +25,7 @@ import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
-import testBase.BaseTest;
+import testBase.BaseClass;
 
 public class ExtentReportManager implements ITestListener {
 	public ExtentSparkReporter sparkReporter;
@@ -56,13 +56,9 @@ public class ExtentReportManager implements ITestListener {
 		extent.setSystemInfo("Module", "Admin");
 		extent.setSystemInfo("Sub Module", "Customers");
 		extent.setSystemInfo("User Name", System.getProperty("user.name"));
-		extent.setSystemInfo("Environemnt", "QA");
-		
-		String os = testContext.getCurrentXmlTest().getParameter("os");
-		extent.setSystemInfo("Operating System", os);
-		
-		String browser = testContext.getCurrentXmlTest().getParameter("browser");
-		extent.setSystemInfo("Browser", browser);
+		extent.setSystemInfo("Environment", "QA");
+		extent.setSystemInfo("Operating System", "Windows");
+		extent.setSystemInfo("Browser", "Chrome");
 		
 		List<String> includedGroups = testContext.getCurrentXmlTest().getIncludedGroups();
 		if(!includedGroups.isEmpty()) {
@@ -84,14 +80,6 @@ public class ExtentReportManager implements ITestListener {
 		
 		test.log(Status.FAIL,result.getName()+" got failed");
 		test.log(Status.INFO, result.getThrowable().getMessage());
-		
-		try {
-			String imgPath = new BaseTest().captureScreen(result.getName());
-			test.addScreenCaptureFromPath(imgPath);
-			
-		} catch (IOException e1) {
-			e1.printStackTrace();
-		}
 	}
 
 	public void onTestSkipped(ITestResult result) {
@@ -112,32 +100,7 @@ public class ExtentReportManager implements ITestListener {
 			Desktop.getDesktop().browse(extentReport.toURI());
 		} catch (IOException e) {
 			e.printStackTrace();
-		}
-
-		
-		/*  try {
-			  URL url = new  URL("file:///"+System.getProperty("user.dir")+"\\reports\\"+repName);
-		  
-		  // Create the email message 
-		  ImageHtmlEmail email = new ImageHtmlEmail();
-		  email.setDataSourceResolver(new DataSourceUrlResolver(url));
-		  email.setHostName("smtp.googlemail.com"); 
-		  email.setSmtpPort(465);
-		  email.setAuthenticator(new DefaultAuthenticator("pavanoltraining@gmail.com","password")); 
-		  email.setSSLOnConnect(true);
-		  email.setFrom("pavanoltraining@gmail.com"); //Sender
-		  email.setSubject("Test Results");
-		  email.setMsg("Please find Attached Report....");
-		  email.addTo("pavankumar.busyqa@gmail.com"); //Receiver 
-		  email.attach(url, "extent report", "please check report..."); 
-		  email.send(); // send the email 
-		  }
-		  catch(Exception e) 
-		  { 
-			  e.printStackTrace(); 
-			  }
-		 */ 
-		 
+		} 
 	}
 
 }
