@@ -15,7 +15,7 @@ public class CabBookingTest extends BaseClass {
 	private static final Logger logger = LogManager.getLogger(CabBookingTest.class);
 	
 	@Test(priority = 1)
-	public void testCabFare() throws InterruptedException {
+	public void testCabFare(){
 		logger.info("***** Starting testCabFare *****");
       try {
           CabBookingPage cabBookingPage = new CabBookingPage(driver);
@@ -63,19 +63,17 @@ public class CabBookingTest extends BaseClass {
 	                        logger.info("Captured message: {}", errorMsg);
 
 	                        // Handle both valid and invalid emails gracefully
-
 							if (!errorMsg.equals("Please enter a valid Email id.")) {
 							    logger.info("Valid email ID entered: {}", email);
 							} else {
 							    logger.error("Invalid email ID detected: {}", email);
 							    Assert.assertEquals(errorMsg, "Please enter a valid Email id.", "Email validation failed for: " + email);
 							}
-
 	                    }
 	                }
 	            }
 	        }
-
+	        
 	        workbook.close();
 	        fis.close();
 	    } catch (Exception e) {
@@ -84,10 +82,8 @@ public class CabBookingTest extends BaseClass {
 	    }
 	}
 
-
-
 	@Test(priority = 3)
-	public void testHotelAdultCount() throws InterruptedException {
+	public void testHotelAdultCount(){
 		logger.info("***** Starting testHotelAdultCount *****");
 	    try {
 	        HotelBookingPage hotelPage = new HotelBookingPage(driver);

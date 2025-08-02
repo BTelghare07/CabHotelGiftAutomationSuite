@@ -1,13 +1,9 @@
 package pageObjects;
 
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.UUID;
-
-import org.apache.poi.ss.usermodel.*;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.*;
 
 import org.openqa.selenium.io.FileHandler;
@@ -19,6 +15,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class GiftCardPage {
 	
    WebDriver driver;
+   
+   public GiftCardPage(WebDriver driver) {
+       this.driver = driver;
+       PageFactory.initElements(driver, this);
+   }
    
    @FindBy(linkText = "Giftcards")
    WebElement giftCardLink;
@@ -34,34 +35,40 @@ public class GiftCardPage {
    
    @FindBy(xpath = "//input[@name='senderEmailId']/following::p")
    WebElement emailErrorMessage;
-   
-   public GiftCardPage(WebDriver driver) {
-       this.driver = driver;
-       PageFactory.initElements(driver, this);
-   }
+
+   // Navigates to the Giftcards section
    public void clickGiftCardLink() {
        giftCardLink.click();
    }
+   
+   // Selects the first gift card from the list
    public void selectFirstGiftCard() {
        firstGiftCard.click();
    }
+
+   // Inputs an invalid email address.
    public void enterInvalidEmail(String email) {
        senderEmailInput.sendKeys(email);
    }
+   
+   // Clicks the "BUY NOW" button.
    public void clickBuyNow() {
        buyNowButton.click();
    }
+   
+   // Returns the error message for invalid email input
    public String getEmailErrorMessage() {
        return emailErrorMessage.getText();
    }
-   
+
+   // Takes a screenshot with the email error message in view.
    public void takeScreenshotWithEmailErrorVisible() {
        try {
            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
            WebElement senderEmailId = driver.findElement(By.name("senderEmailId"));
            WebElement targetElement = wait.until(ExpectedConditions.visibilityOf(senderEmailId));
            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", targetElement);
-           Thread.sleep(1000);
+           wait.until(ExpectedConditions.elementToBeClickable(targetElement));
            File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
            String randomFileName = "fullpage_" + UUID.randomUUID() + ".png";
            File destination = new File(System.getProperty("user.dir") + "\\screenshotfolder\\" + randomFileName);
@@ -72,26 +79,6 @@ public class GiftCardPage {
            System.out.println("Error saving screenshot: " + e.getMessage());
        } catch (Exception e) {
            System.out.println("Error capturing screenshot: " + e.getMessage());
-       }
-   }
-   
-   // method to read emails from Excel
-   public static String[] readEmailsFromExcel(String filePath) {
-       try (FileInputStream fis = new FileInputStream(new File(filePath));
-            Workbook workbook = new XSSFWorkbook(fis)) {
-           Sheet sheet = workbook.getSheetAt(0);
-           int rowCount = sheet.getPhysicalNumberOfRows();
-           String[] emails = new String[rowCount];
-           for (int i = 0; i < rowCount; i++) {
-               Row row = sheet.getRow(i);
-               if (row != null && row.getCell(0) != null) {
-                   emails[i] = row.getCell(0).getStringCellValue();
-               }
-           }
-           return emails;
-       } catch (Exception e) {
-           e.printStackTrace();
-           return new String[0];
        }
    }
 }

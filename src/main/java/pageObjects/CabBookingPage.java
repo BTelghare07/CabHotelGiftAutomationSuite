@@ -75,7 +75,7 @@ public class CabBookingPage {
     @FindBy(xpath = "//span[@class='itemWrapper headerIcons makeFlex hrtlCenter column moreWrapper']")
     WebElement hoverElement;
     
-    public void bookCab() throws InterruptedException {
+    public void bookCab(){
     	//Close Modal Popup
         actions.moveToElement(closeModal).click().perform();
         
